@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Number Game</title>
+    <script src="src/phaser.min.js"></script>
+    <script src="src/Boot.js"></script>
+    <script src="src/Preload.js"></script>
+    <script src="src/Mainmenu.js"></script>
+    <script src="src/Game.js"></script>
+    <script src="src/Pause.js"></script>
+    <script src="src/Gamecompleted.js"></script>
+    <script src="src/Leaderboard.js"></script>
+
+    <script>
+      (function(){
+
+        var game = new Phaser.Game( 500, 500, Phaser.AUTO, "game");
+        game.state.add("Boot",boot);
+        game.state.add("Preload",preload);
+        game.state.add("Mainmenu",mainMenu);
+        game.state.add("Game",game);
+        game.state.add("Pause",pause);
+        game.state.add("Gamecompleted",gameCompleted);
+        game.state.add("Leaderboard",leaderBoard);
+        game.state.start("Boot");
+      }) ();
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
