@@ -17,11 +17,11 @@
         var game = new Phaser.Game( 900, 600, Phaser.AUTO, "game");
         game.state.add("Boot", Number.Boot);
         game.state.add("Preloader", Number.Preloader);
-        game.state.add("MainMenu", Number.MainMenu);
+        game.state.add("MainMenu", Number.Mainmenu);
         game.state.add("Game", Number.Game);
         game.state.add("Pause", Number.Pause);
-        game.state.add("Gamecompleted", Number.GameCompleted);
-        game.state.add("Leaderboard", Number.LeaderBoard);
+        game.state.add("Gamecompleted", Number.Gamecompleted);
+        game.state.add("Leaderboard", Number.Leaderboard);
         game.state.start("Boot");
       }) ();
     </script>

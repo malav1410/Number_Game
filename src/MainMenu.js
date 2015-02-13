@@ -1,8 +1,8 @@
-Number.MainMenu = function (game) {
+Number.Mainmenu = function (game) {
   console.log("%cLoading my awesome Mainmenu", "color:white; background:red");
 };
 
-Number.MainMenu.prototype = {
+Number.Mainmenu.prototype = {
   create: function() {
     // Add mainmenu title
     this.add.sprite((Number.GAME_WIDTH-670)/2, 60, 'header');
@@ -12,7 +12,7 @@ Number.MainMenu.prototype = {
   },
 
   startGame: function() {
-    this.state.start('Boot');
+    this.state.start('Game');
   }
 
 };
