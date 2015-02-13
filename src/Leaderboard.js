@@ -13,10 +13,15 @@ Number.Leaderboard.prototype = {
     this.add.text(550, 300, '9.87 Sec', { font: "25px Arial", fill: "#5800aa", align: "center" });
 
     // add the button that will Restart the game
-    this.startButton = this.add.button(Number.GAME_WIDTH-501-10, Number.GAME_HEIGHT-143-10, 'button-start', this.RestartGame, this, 1, 0, 2);
+    this.startButton = this.add.button(Number.GAME_WIDTH-301-10, Number.GAME_HEIGHT-143-10, 'button-start', this.RestartGame, this, 1, 0, 2);
+    this.menuButton = this.add.button(Number.GAME_WIDTH-701-10, Number.GAME_HEIGHT-143-10, 'button-menu', this.MainMenu, this, 1, 0, 2);
   },
 
   RestartGame: function() {
     this.state.start('Game',true,false);
+  },
+
+  MainMenu: function() {
+    this.state.start('MainMenu');
   }
 };

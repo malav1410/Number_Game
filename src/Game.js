@@ -45,7 +45,7 @@ Number.Game.prototype = {
     // pause the game
     this.game.paused = true;
     // add proper informational text
-    var pausedText = this.add.text(290, 500, "Game paused.\nTap anywhere to continue.", { font: "30px Arial", fill: "#ffffff", align: "center" });
+    var pausedText = this.add.text(290, 500, "Game paused.\nTap anywhere to continue.", { font: "30px Arial", fill: "#000000", align: "center" });
     // set event listener for the user's click/tap the screen
     this.input.onDown.add(function(){
       // remove the pause text
