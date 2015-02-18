@@ -1,20 +1,16 @@
-Number.Leaderboard = function() {
+Number.Leaderboard = function(game) {
   console.log("%cGame Leaderboard", "color:white; background:red");
 }
 
 Number.Leaderboard.prototype = {
   create: function() {
-    this.add.text(300, 100, 'Leader Board', { font: "50px Arial", fill: "#5800aa", align: "center" });
-    this.add.text(250, 200, 'Malav Desai', { font: "25px Arial", fill: "#5800aa", align: "center" });
-    this.add.text(550, 200, '10.00 Sec', { font: "25px Arial", fill: "#5800aa", align: "center" });
-    this.add.text(250, 250, 'malav desai', { font: "25px Arial", fill: "#5800aa", align: "center" });
-    this.add.text(550, 250, '12.20 Sec', { font: "25px Arial", fill: "#5800aa", align: "center" });
-    this.add.text(250, 300, 'malav desai', { font: "25px Arial", fill: "#5800aa", align: "center" });
-    this.add.text(550, 300, '9.87 Sec', { font: "25px Arial", fill: "#5800aa", align: "center" });
+     this.add.sprite(0,0, 'leader-board-background');
 
     // add the button that will Restart the game
-    this.startButton = this.add.button(Number.GAME_WIDTH-301-10, Number.GAME_HEIGHT-143-10, 'button-start', this.RestartGame, this, 1, 0, 2);
-    this.menuButton = this.add.button(Number.GAME_WIDTH-701-10, Number.GAME_HEIGHT-143-10, 'button-menu', this.MainMenu, this, 1, 0, 2);
+    this.nextLevelButton = this.add.button( 590, 290, 'next-level-button', this.RestartGame, this, 1, 0, 2);
+    this.rePlayButton = this.add.button( 590, 390, 're-play-button', this.RestartGame, this, 1, 0, 2);
+    this.mainMenuButton = this.add.button( 590, 490, 'main-menu-button', this.MainMenu, this, 1, 0, 2);
+    
   },
 
   RestartGame: function() {

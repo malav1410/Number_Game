@@ -7,19 +7,31 @@ Number.Preloader = function(game) {
 };
 
 Number.Preloader.prototype = {
+  init: function () {
+    this.add.sprite(0,0, 'game_background');
+  },
+  
   preload: function () {
 
     // Set background color and preload image
-    this.stage.backgroundColor = 'D3D3D3';
-    this.preloadBg = this.add.sprite((900-297)/2, (600-145)/2, 'preloaderBg');
-    this.preloadBar = this.add.sprite((900-158)/2, (600-50)/2, 'preloaderBar');
+    this.preloadBg = this.add.sprite(270, 480, 'preloaderBg');
+    this.preloadBar = this.add.sprite(270, 480, 'preloaderBar');
     this.load.setPreloadSprite(this.preloadBar);
 
-    // Load images
+    // Load Main menu images
     this.load.image('header','img/header.png');
     this.load.image('button-pause', 'img/button-pause.png');
-    this.load.image('button-start', 'img/button-start.png');
-    this.load.image('button-menu', 'img/button-menu.png');
+    this.load.image('start-button', 'img/start-button.png');
+    this.load.image('highscore-button', 'img/highscore-button.png');
+    this.load.image('help-button', 'img/help-button.png');
+    
+    // Load Leader board images
+    this.load.image('leader-board-background', 'img/leader-board-background.png');
+    this.load.image('next-level-button', 'img/next-level-button.png');
+    this.load.image('re-play-button', 'img/re-play-button.png');
+    this.load.image('main-menu-button', 'img/main-menu-button.png');
+
+    
 
     // If you have any spritesheets then load them here.
     // this.load.spritesheet('button-audio', 'img/button-audio.png', 35, 35);
