@@ -9,21 +9,21 @@ Number.Mainmenu.prototype = {
     //this.add.sprite((Number.GAME_WIDTH-670)/2, 60, 'header');
 
     // add the button that will start the game
-    this.startButton = this.add.button( 356, 345, 'start-button', this.startGame, this, 1, 0, 2);
-    this.highScoreButton = this.add.button( 356, 425, 'highscore-button', this.loadLeaderBoard, this, 1, 0, 2);
-    this.helpButton = this.add.button( 356, 505, 'help-button', this.loadHelp, this, 1, 0, 2);
+    this.startButton = this.add.button( 315, 345, 'start-button', this.startGame);
+    this.highScoreButton = this.add.button( 315, 425, 'highscore-button', this.loadLeaderBoard);
+    this.helpButton = this.add.button( 315, 505, 'help-button', this.loadHelp);
   },
 
   startGame: function() {
-    this.state.start('Game');
+    this.game.state.start('Game');
   },
 
   loadLeaderBoard: function() {
-    this.state.start('Leaderboard');
+    this.game.state.start('HighScores');
   },
 
   loadHelp: function() {
-    this.state.start('Help');
+    this.game.state.start('Help');
   }
 
 };

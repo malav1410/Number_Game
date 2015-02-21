@@ -10,12 +10,13 @@
     <script src="src/Game.js"></script>
     <script src="src/Pause.js"></script>
     <script src="src/Gamecompleted.js"></script>
+    <script src="src/HighScores.js"></script>
     <script src="src/Leaderboard.js"></script>
 
     <script>
       (function(){
 
-        var game = new Phaser.Game( 900, 600, Phaser.AUTO, "game");
+        var game = new Phaser.Game( 800, 600, Phaser.AUTO, "game");
         game.state.add("Boot", Number.Boot);
         game.state.add("Preloader", Number.Preloader);
         game.state.add("MainMenu", Number.Mainmenu);
@@ -23,6 +24,7 @@
         game.state.add("Game", Number.Game);
         game.state.add("Pause", Number.Pause);
         game.state.add("Gamecompleted", Number.Gamecompleted);
+        game.state.add("HighScores", Number.HighScores);
         game.state.add("Leaderboard", Number.Leaderboard);
         game.state.start("Boot");
       }) ();
