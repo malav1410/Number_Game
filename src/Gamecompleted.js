@@ -5,10 +5,10 @@ Number.Gamecompleted = function(game) {
 
 Number.Gamecompleted.prototype = {
   init: function(counter) {
-    alert("Game Over!! Loop count = " + counter );
+    alert("Your score" + counter );
   },
 
   create: function() {
-    this.state.start("Leaderboard");
+    this.state.start("Leaderboard",true,false, counter);
   },
 };

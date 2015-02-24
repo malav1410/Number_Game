@@ -47,7 +47,6 @@ Number.Preloader.prototype = {
     this.load.image('playagain-button', 'img/playagain-button.png');
     this.load.image('main-menu-button', 'img/main-menu-button.png');
 
-    
 
     // If you have any spritesheets then load them here.
     // this.load.spritesheet('button-audio', 'img/button-audio.png', 35, 35);
